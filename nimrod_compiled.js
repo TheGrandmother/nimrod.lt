@@ -30,10 +30,10 @@ lt.plugins.nimrod.resolve_path = require("path").resolve;
 
 lt.plugins.nimrod.which = lt.util.load.node_module.call(null,"shelljs").which;
 
-lt.plugins.nimrod.nimrod_exe = (function (){var or__6797__auto__ = lt.plugins.nimrod.which.call(null,"nimrod");if(cljs.core.truth_(or__6797__auto__))
+lt.plugins.nimrod.nimrod_exe = (function (){var or__6797__auto__ = lt.plugins.nimrod.which.call(null,"nim");if(cljs.core.truth_(or__6797__auto__))
 {return or__6797__auto__;
 } else
-{return lt.objs.console.error.call(null,[cljs.core.str("Nimrod executable not found in PATH: "),cljs.core.str(process.env.PATH)].join(''));
+{return lt.objs.console.error.call(null,[cljs.core.str("Nim executable not found in PATH: "),cljs.core.str(process.env.PATH)].join(''));
 }
 })();
 

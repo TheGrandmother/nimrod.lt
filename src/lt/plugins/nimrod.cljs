@@ -16,8 +16,8 @@
 (def resolve-path (.-resolve (js/require "path")))
 (def which (.-which (load/node-module "shelljs")))
 
-(def nimrod-exe (or (which "nimrod")
-                    (console/error (str "Nimrod executable not found in PATH: "
+(def nimrod-exe (or (which "nim")
+                    (console/error (str "Nim executable not found in PATH: "
                                         (-> js/process .-env .-PATH)))))
 
 (def errors-regex #"(.+)\((\d+), (\d+)\) (Error|Warning|Hint): (.+)")
